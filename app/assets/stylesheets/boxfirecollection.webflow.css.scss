@@ -67,7 +67,7 @@ p {
 }
 .hero {
   margin-top: 0px;
-  background-image: url('/assets/shutterstock_69757270s.jpg');
+  background-image: asset-url('shutterstock_69757270s.jpg');
   background-size: cover;
   background-repeat: no-repeat no-repeat;
   background-attachment: fixed;
@@ -163,7 +163,7 @@ p {
 }
 .need-help {
   background-color: rgba(0, 0, 0, 0);
-  background-image: url('shutterstock_58047697.jpg');
+  background-image: asset-url('shutterstock_58047697.jpg');
   background-position: 0px 100%;
   background-size: cover;
   background-repeat: no-repeat no-repeat;
