@@ -1,0 +1,30 @@
+<div class="payment">
+  <div class="w-container container">
+    <div class="w-row">
+      <div class="w-col w-col-9 payment-form-column">
+        
+       <%= render 'form' %>
+      
+
+      </div>
+      <div class="w-col w-col-3" style="text-align:right;">
+        <h4 class="stat-head">Top 5</h4>
+        <ul class="top-five-list">
+        <% top_five(@orders).each do |order| %>
+          <li><%= name(order) %> <%= money(order.amount_in_cents) %> </li>
+        <% end %>
+        </ul>
+        <h4 class="stat-head">Average</h4>
+        <div class="stat"><%= average(@orders) %></div>
+      </div>
+    </div>
+    <div class="w-form">
+      <div class="w-form-done">
+        <p>Thank you! Your submission has been received!</p>
+      </div>
+      <div class="w-form-fail">
+        <p>Oops! Something went wrong while submitting the form :(</p>
+      </div>
+    </div>
+  </div>
+</div>

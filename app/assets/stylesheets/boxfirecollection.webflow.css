@@ -1,0 +1,293 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  font-size: 12px;
+  line-height: 20px;
+}
+h1 {
+  margin: 10px 0px;
+  font-family: Oswald, sans-serif;
+  color: white;
+  font-size: 100px;
+  line-height: 111px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h2 {
+  margin: 10px 0px;
+  font-family: Oswald, sans-serif;
+  color: #008cff;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+h3 {
+  margin: 0px 0px 10px;
+  font-family: Oswald, sans-serif;
+  color: #615f5f;
+  font-size: 29px;
+  line-height: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+h4 {
+  margin: 10px 0px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+h5 {
+  margin: 10px 0px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+}
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 700;
+}
+p {
+  margin-bottom: 5px;
+  font-family: Bitter, serif;
+  color: #5c5c5c;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 400;
+}
+.button {
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+.hero {
+  margin-top: 0px;
+  background-image: url(../assets/shutterstock_69757270s.jpg);
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  background-attachment: fixed;
+}
+.time {
+  margin-top: 67px;
+  font-family: Oswald, sans-serif;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.container {
+  margin-top: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.container.hero-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.container.books-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.container.howmuch {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.logo {
+  position: absolute;
+  left: 900px;
+  display: block;
+  margin-left: -1px;
+  padding-left: 0px;
+  float: right;
+}
+.subhead {
+  margin-top: 0px;
+  margin-bottom: 35px;
+  font-size: 66px;
+}
+.subhead.subhead-right {
+  text-align: center;
+}
+.books {
+  margin-bottom: 40px;
+  padding-top: 10px;
+}
+.books.additional-books {
+  margin-bottom: 100px;
+  padding-top: 37px;
+}
+.book {
+  float: left;
+  box-shadow: rgba(0, 0, 0, 0.30) 0px 0px 15px 0px;
+}
+.book.add-book {
+  float: right;
+}
+.standard-section {
+  background-color: #ededed;
+}
+.money {
+  font-family: Oswald, sans-serif;
+  color: white;
+  font-size: 86px;
+  line-height: 58px;
+  text-align: left;
+}
+.h3-right {
+  text-align: center;
+}
+.payment {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #54595c;
+}
+.payment-slider-head {
+  color: white;
+  text-align: right;
+}
+.form {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.label {
+  padding-top: 11px;
+  padding-bottom: 0px;
+  font-family: Oswald, sans-serif;
+  color: #a19d9d;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.need-help {
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(../assets/shutterstock_58047697.jpg);
+  background-position: 0px 100%;
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  background-attachment: fixed;
+  color: #d6d6d6;
+}
+.charity-description {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ccc;
+  font-size: 11px;
+  line-height: 16px;
+}
+.chraity-name {
+  color: #fff0f0;
+}
+.charity-head {
+  margin-top: 0px;
+  padding-top: 33px;
+  color: #fcfcfc;
+}
+.top-five-list {
+  margin-bottom: 35px;
+  font-family: Oswald, sans-serif;
+  color: #b3b1b1;
+}
+.stat-head {
+  font-family: Oswald, sans-serif;
+  font-size: 38px;
+  text-transform: uppercase;
+}
+.stat {
+  font-family: Oswald, sans-serif;
+  color: #b3b1b1;
+  font-size: 40px;
+  line-height: 46px;
+}
+.need-help-head {
+  margin-bottom: 1px;
+  padding-top: 46px;
+  padding-bottom: 46px;
+  color: snow;
+  text-align: center;
+}
+.faq-container {
+  margin-top: 0px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.quesiont {
+  padding-top: 40px;
+  padding-bottom: 5px;
+  font-family: Oswald, sans-serif;
+  color: #6b6a6a;
+  font-size: 28px;
+  line-height: 33px;
+  font-weight: 300;
+}
+.answer {
+  padding-top: 18px;
+  font-size: 12px;
+  line-height: 23px;
+}
+.copyright {
+  padding: 15px 0 5px 0;
+}
+@media (max-width: 991px) {
+  .logo {
+    left: 675px;
+  }
+  .subhead.subhead-right {
+    line-height: 63px;
+  }
+}
+@media (max-width: 767px) {
+  h2 {
+    padding-left: 14px;
+  }
+  .logo {
+    left: 500px;
+  }
+}
+@media (max-width: 479px) {
+  h1 {
+    font-size: 63px;
+    line-height: 61px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    margin-bottom: 22px;
+    padding-left: 20px;
+  }
+  p {
+    padding-right: 26px;
+  }
+  .logo {
+    left: 10px;
+    top: -75px;
+  }
+  .hero-subhead {
+    font-size: 28px;
+  }
+  .subhead {
+    line-height: 60px;
+  }
+  .books {
+    padding-left: 50px;
+  }
+  .book {
+    margin-top: 28px;
+    padding-left: 0px;
+  }
+  .book.add-book {
+    margin-top: 18px;
+    padding-top: 0px;
+    float: left;
+  }
+  .money {
+    text-align: center;
+  }
+  .payment-slider-head {
+    margin-top: 30px;
+    padding-left: 0px;
+    text-align: center;
+  }
+}

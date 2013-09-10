@@ -5,10 +5,56 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  
+  <meta charset="utf-8">
+     <meta name="description" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+     <script>
+       WebFont.load({
+         google: {
+           families: ["Oswald:300,400,700","Bitter:400,700"]
+         }
+       });
+     </script>
+     <link rel="icon" type="image/x-icon" href="https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico">
+
+<script>
+
+$(function () {
+	var austDay = new Date(2013, 9 - 1, 17);
+	$('#defaultCountdown').countdown({until: austDay});
+	$('#year').text(austDay.getFullYear());
+});
+
+</script>
+  
 </head>
 <body>
+<div class="hero">
+  <div class="w-container container hero-container">
+    <div class="w-row">
+      <div class="w-col w-col-6 w-clearfix">
+        <img class="logo" src="/assets/gray-small-boxfirepress.png" alt="gray-small-boxfirepress.png">
+        <h1>The Complete Collection</h1>
+      </div>
+      <div class="w-col w-col-6"></div>
+    </div>
+    <h2 class="hero-subhead">10 Ebooks Delivered Instantly</h2>
+    <h2>Pay what you want*</h2>
+    <div id="defaultCountdown" class="time" ></div>
+    <h2>One week only</h2>
+  </div>
+</div>
 
 <%= yield %>
+
+<div>
+   <div class="w-container">
+     <div class="copyright">Copyright 2013 Boxfire Press. All Rights Reserved.</div>
+   </div>
+ </div>
 
 </body>
 </html>

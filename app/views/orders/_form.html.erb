@@ -1,0 +1,55 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+   <div id="slider-range-min"></div>
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount %>
+   
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :f_name %><br>
+    <%= f.text_field :f_name %>
+  </div>
+  <div class="field">
+    <%= f.label :l_name %><br>
+    <%= f.text_field :l_name %>
+  </div>
+  
+  <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:stripe_public_key] %>" data-name="Boxfire Press"
+          data-description="Pay What You Want Collection 2013"></script>
+          
+  
+  <script>
+    $(function() {
+      $( "#slider-range-min" ).slider({
+        range: "min",
+        value: 15,
+        min: 10,
+        max: 250,
+        slide: function( event, ui ) {
+          $( "#order_amount" ).val( ui.value );
+        }
+      });
+      $( "#order_amount" ).val( $( "#slider-range-min" ).slider( "value" ) );
+      $( ".stripe-button").data('amount', $( "#slider-range-min" ).slider( "value" ) );
+    });
+    </script>
+  
+<% end %>

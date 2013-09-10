@@ -1,0 +1,93 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="w-row">
+    <div class="w-col w-col-3">
+      <div class="money" style="margin-top:-28px;"><div class="dollar-sign" style="position:relative;top:-36px;font-size:50%;display:inline-block;">$</div>
+      
+         <%= f.text_field :amount, style: 'background:none;border:none;color:#fff;width:134px;margin-left:-17px;' %>
+         
+         </div>
+    </div>
+    <div class="w-col w-col-9">
+      
+         <div id="slider-range-min"></div>
+         <h3 class="payment-slider-head" style="padding-top:10px;">Amount I'll Pay</h3>
+    </div>
+  </div>
+  
+  
+    <label class="label" for="name">Name</label>
+    <div class="w-row">
+      <div class="w-col w-col-6">
+          <%= f.text_field :f_name, class: 'w-input', placeholder: 'First Name' %>
+      </div>
+      <div class="w-col w-col-6">
+        <%= f.text_field :l_name, class: 'w-input', placeholder: 'Last Name' %>
+        
+      </div>
+    </div>
+   
+    <div class="label">
+    <%= check_box "order", "anonymous" %>
+    I don't want to appear in the top 5 list, please keep my purchase anonymous</div>
+   
+    <label class="label" for="email">Email Address</label>
+    <%= f.email_field :email, class: 'w-input', placeholder: 'Your Email' %>   
+   
+    <h4 class="charity-head">We're going to give 10 percent of your purchase to charity. Vote for which one you think should get it</h4>
+   
+    <div class="w-row charities">
+      <div class="w-col w-col-4">
+        <div><%= radio_button("order", "charity", "It Gets Better Project") %> It Gets Better Project</div>
+        <p class="charity-description">The It Gets Better Project's mission is to communicate to lesbian, gay, bisexual and transgender youth around the world that it gets better, and to create and inspire the changes needed to make it better for them.</p>
+      </div>
+      <div class="w-col w-col-4">
+        <div class="charity-name"></div>
+        <div><%= radio_button("order", "charity", "It Gets Better Project") %> It Gets Better Project</div>
+        <p class="charity-description">The It Gets Better Project's mission is to communicate to lesbian, gay, bisexual and transgender youth around the world that it gets better, and to create and inspire the changes needed to make it better for them.</p>
+      </div>
+      <div class="w-col w-col-4">
+        <div><%= radio_button("order", "charity", "It Gets Better Project") %> It Gets Better Project</div>
+        <p class="charity-description">The It Gets Better Project's mission is to communicate to lesbian, gay, bisexual and transgender youth around the world that it gets better, and to create and inspire the changes needed to make it better for them.</p>
+      </div>
+    </div>
+  
+    <script src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:stripe_public_key] %>" data-name="Boxfire Press"
+            data-description="Pay What You Want Collection 2013"></script>  
+            
+            
+       
+            <script>
+              jQuery(function() {
+                jQuery( "#slider-range-min" ).slider({
+                  range: "min",
+                  value: 20,
+                  min: 10,
+                  max: 500,
+                  animate: 'fast',
+                  slide: function( event, ui ) {
+                    jQuery( "#order_amount" ).val( ui.value );
+                  }
+                });
+                jQuery( "#order_amount" ).val( $( "#slider-range-min" ).slider( "value" ) );
+               
+              });
+              </script>      
+     <% end %>
+  
+
+
+
+  

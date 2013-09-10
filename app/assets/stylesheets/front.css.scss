@@ -1,0 +1,39 @@
+// Place all the styles related to the front controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.stripe-button-el {margin:25px 0 0 0;}
+
+ul.top-five-list {list-style:none;padding:0px;}
+.top-five-list li {font-size:170%;padding:0px 0px 15px 0px;font-weight:200;}
+
+
+#defaultCountdown {  }
+.countdown_rtl {
+	direction: rtl;
+}
+.countdown_holding span {
+	color: #888;
+}
+.countdown_row {
+	
+	padding: 0px 0px;
+}
+.countdown_section {
+	display: inline-block;
+	padding: 0px 35px 0 0;
+
+}
+.countdown_amount, .countdown_descr {
+	font-size:55px;
+}
+.countdown_descr {
+}
+.need-help-head a {
+	text-decoration:none;
+	font-weight:400;
+	color:#333;
+}
+.need-help-head a:hover {
+	color:#666;
+}
