@@ -67,7 +67,7 @@ p {
 }
 .hero {
   margin-top: 0px;
-  background-image: url('shutterstock_69757270s.jpg');
+  background-image: url('/assets/shutterstock_69757270s.jpg');
   background-size: cover;
   background-repeat: no-repeat no-repeat;
   background-attachment: fixed;
