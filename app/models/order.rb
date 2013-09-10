@@ -29,7 +29,7 @@ def send_product
           :first_name => self.f_name,
           :last_name => self.l_name,
           :email => self.email,
-          :order_items => [{:sku => 'BCCF2013BONUS', :price => "$#{self.amount_in_cents.to_f / 100}0"}]
+          :order_items => [{:sku => 'BPWYWCC2013-Bonus'}]
       )
       
   else
@@ -38,7 +38,7 @@ def send_product
               :first_name => self.f_name,
               :last_name => self.l_name,
               :email => self.email,
-              :order_items => [{:sku => 'BCCF2013', :price => "$#{self.amount_in_cents.to_f / 100}0"}]
+              :order_items => [{:sku => 'BPWYWCC2013'}]
           )  
       
   end

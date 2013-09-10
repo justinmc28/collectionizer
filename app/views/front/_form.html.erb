@@ -45,21 +45,20 @@
     <label class="label" for="email">Email Address</label>
     <%= f.email_field :email, class: 'w-input', placeholder: 'Your Email' %>   
    
-    <h4 class="charity-head">We're going to give 10 percent of your purchase to charity. Vote for which one you think should get it</h4>
+    <h4 class="charity-head">We're going to give 10 percent of your purchase to charity. Vote for which one you think should receive the proceeds.</h4>
    
     <div class="w-row charities">
       <div class="w-col w-col-4">
         <div><%= radio_button("order", "charity", "It Gets Better Project", { :checked => true }) %> It Gets Better Project</div>
         <p class="charity-description">The It Gets Better Project's mission is to communicate to lesbian, gay, bisexual and transgender youth around the world that it gets better, and to create and inspire the changes needed to make it better for them.</p>
       </div>
-      <div class="w-col w-col-4">
-        <div class="charity-name"></div>
-        <div><%= radio_button("order", "charity", "It Gets Better Project") %> It Gets Better Project</div>
-        <p class="charity-description">The It Gets Better Project's mission is to communicate to lesbian, gay, bisexual and transgender youth around the world that it gets better, and to create and inspire the changes needed to make it better for them.</p>
+      <div class="w-col w-col-4" style="padding-right:3px;">
+        <div><%= radio_button("order", "charity", "Hero Initiative") %> Hero Iniative</div>
+        <p class="charity-description"> The Hero Initiative helps comic book creators in need. Hero creates a financial safety net for yesterdays' creators who may need emergency medical aid, financial support for essentials of life, and an avenue back into paying work.</p>
       </div>
       <div class="w-col w-col-4">
-        <div><%= radio_button("order", "charity", "It Gets Better Project") %> It Gets Better Project</div>
-        <p class="charity-description">The It Gets Better Project's mission is to communicate to lesbian, gay, bisexual and transgender youth around the world that it gets better, and to create and inspire the changes needed to make it better for them.</p>
+        <div><%= radio_button("order", "charity", "Stone Soup Films") %> Stone Soup Films</div>
+        <p class="charity-description">Stone Soup Films is a non-profit production company that creates and donates quality promotional films for worthy non-profits in Washington, D.C. in order to enhance their visibility among donors, constituents, and the general public.</p>
       </div>
     </div>
   
