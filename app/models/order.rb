@@ -2,6 +2,8 @@ class Order < ActiveRecord::Base
   
   validates :amount, numericality: {greater_than_or_equal_to: 10}
   validates :email, presence: true
+  validates :f_name, presence: true
+  validates :l_name, presence: true
   after_save :send_product
   
 def save_with_payment
@@ -19,14 +21,28 @@ end
 
 def send_product
   FetchAppAPI::Base.basic_auth(:key => Rails.configuration.fetch[:key], :token => Rails.configuration.fetch[:token])
+  
+  if self.amount_in_cents >= 2000
+  
   fetch_order = FetchAppAPI::Order.create(
-          :title => "Test Order",
-          :first_name => "Donald",
-          :last_name => "Duck",
+          :title => "Complete Collection w/ Bonus Books",
+          :first_name => self.f_name,
+          :last_name => self.l_name,
           :email => self.email,
-          :order_items => [{:sku => 'BCCF2013'}]
+          :order_items => [{:sku => 'BCCF2013BONUS', :price => "$#{self.amount_in_cents.to_f / 100}0"}]
       )
+      
+  else
+      fetch_order = FetchAppAPI::Order.create(
+              :title => "Complete Collection",
+              :first_name => self.f_name,
+              :last_name => self.l_name,
+              :email => self.email,
+              :order_items => [{:sku => 'BCCF2013', :price => "$#{self.amount_in_cents.to_f / 100}0"}]
+          )  
+      
   end
+end
 
   
 end

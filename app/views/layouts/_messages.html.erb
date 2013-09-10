@@ -1,0 +1,16 @@
+<% if flash[:notice] %>
+   <div id="msg" class="notice" title="Success!">
+	<div class="wrap">
+		<%= flash[:notice] %>
+	</div>
+	</div>
+<% end %>
+
+<% if flash[:alert] %>
+	<div id="msg" class="error" title="Uh oh. Something is wrong.">
+		<div class="wrap">
+
+   		<%=raw flash[:alert] %>
+		</div>
+	</div>
+<% end %>

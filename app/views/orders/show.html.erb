@@ -1,19 +1,16 @@
+<div class="standard-section">
+  <div class="w-container faq-container">
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Amount:</strong>
-  <%= @order.amount %>
-</p>
+<h2>Thanks <%= @order.f_name.titleize %>!</h2>
+<h3>You totally rock</h3>
 
-<p>
-  <strong>Email:</strong>
-  <%= @order.email %>
-</p>
 
-<p>
-  <strong>Card:</strong>
-  <%= @order.card %>
-</p>
+You'll get in email with details about how to download your books in a few minutes. If you can't find it, be sure and check your spam folder.<br />
+Still need help? Email <%= mail_to "support@boxfirepress.com", "support@boxfirepress.com", subject: "Complete Collection Help" %>
+<br /><br />
+<%= link_to 'Home', root_path %>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+</div>
+</div>
