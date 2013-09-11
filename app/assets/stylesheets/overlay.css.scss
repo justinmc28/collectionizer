@@ -1,0 +1,28 @@
+#overlay {
+	background: rgba(0,0,0,.7);
+	width: 194px;
+	height: 300px;
+	position: absolute;
+	z-index: 99;
+	opacity: 0;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-delay: 0.2s;
+	-webkit-transition-timing-function: ease;
+	transition-duration: 1s;
+	transition-delay: 0.2s;
+	transition-timing-function: ease;
+	color:#c2ff00;
+	padding:6px;
+	font-size:18px;
+	line-height:1.5em;
+	 font-family: Oswald, sans-serif;
+	font-weight: 200;
+
+}
+#overlay:hover {
+	opacity: 1;
+}
+.overlay-right {
+	float:right;
+	left:37px;
+}
