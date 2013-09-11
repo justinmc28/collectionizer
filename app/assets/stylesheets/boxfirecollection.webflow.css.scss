@@ -236,6 +236,9 @@ p {
   .subhead.subhead-right {
     line-height: 63px;
   }
+.money {
+    font-size:50%;
+  }
 }
 @media (max-width: 767px) {
   h2 {
@@ -243,6 +246,9 @@ p {
   }
   .logo {
     left: 500px;
+  }
+.money {
+    font-size:50%;
   }
 }
 @media (max-width: 479px) {
