@@ -13,6 +13,21 @@ Still need help? Email <%= mail_to "support@boxfirepress.com", "support@boxfirep
 <%= link_to 'Home', root_path %>
 
 <script type="text/javascript">
+var fb_param = {};
+fb_param.pixel_id = '6007861806633';
+fb_param.value = '<%= @order.amount_in_cents.to_f / 100 %>';
+fb_param.currency = 'USD';
+(function(){
+  var fpw = document.createElement('script');
+  fpw.async = true;
+  fpw.src = '//connect.facebook.net/en_US/fp.js';
+  var ref = document.getElementsByTagName('script')[0];
+  ref.parentNode.insertBefore(fpw, ref);
+})();
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/offsite_event.php?id=6007861806633&amp;value=0&amp;currency=USD" /></noscript>
+
+<script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-XXXXX-X']);
