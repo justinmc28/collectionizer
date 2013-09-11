@@ -12,5 +12,41 @@ Still need help? Email <%= mail_to "support@boxfirepress.com", "support@boxfirep
 <br /><br />
 <%= link_to 'Home', root_path %>
 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_addTrans',
+    '<%= @order.id %>',           // transaction ID - required
+    'Boxfire Complete Collection',  // affiliation or store name
+    '<%= @order.amount_in_cents.to_f / 100 %>',          // total - required
+    '', // tax
+    '', // shipping
+    '', // city
+    '', // state
+    '', // country
+
+  ]);
+
+
+  _gaq.push(['_addItem',
+    '<%= @order.id %>',           // transaction ID - required
+    '<% if @order.amount_in_cents >= 2000 %>BPWYWCC2013-Bonus<% else %>BPWYWCC<% end %>',           // SKU/code - required
+    'Boxfire Pay What You Want Complete Collection',        // product name
+    '<% if @order.amount_in_cents >= 2000 %>w/ Bonus<% else %>w/o Bonus<% end %>',   // category or variation
+    '<%= @order.amount_in_cents.to_f / 100 %>',          // unit price - required
+    '1'               // quantity - required
+  ]);
+  _gaq.push(['_trackTrans']); //submits transaction to the Analytics servers
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 </div>
 </div>
