@@ -15,7 +15,7 @@ Still need help? Email <%= mail_to "support@boxfirepress.com", "support@boxfirep
 <script type="text/javascript">
 var fb_param = {};
 fb_param.pixel_id = '6007861806633';
-fb_param.value = '<%= @order.amount_in_cents.to_f / 100 %>';
+fb_param.value = '<%= money_no_sign(@order.amount_in_cents.to_f) %>';
 fb_param.currency = 'USD';
 (function(){
   var fpw = document.createElement('script');
