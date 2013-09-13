@@ -35,7 +35,7 @@ fb_param.currency = 'USD';
   _gaq.push(['_addTrans',
     '<%= @order.id %>',           // transaction ID - required
     'Boxfire Complete Collection',  // affiliation or store name
-    '<%= @order.amount_in_cents.to_f / 100 %>',          // total - required
+    '<%= money_no_sign(@order.amount_in_cents.to_f) %>',          // total - required
     '', // tax
     '', // shipping
     '', // city
@@ -50,7 +50,7 @@ fb_param.currency = 'USD';
     '<% if @order.amount_in_cents >= 2000 %>BPWYWCC2013-Bonus<% else %>BPWYWCC<% end %>',           // SKU/code - required
     'Boxfire Pay What You Want Complete Collection',        // product name
     '<% if @order.amount_in_cents >= 2000 %>w/ Bonus<% else %>w/o Bonus<% end %>',   // category or variation
-    '<%= @order.amount_in_cents.to_f / 100 %>',          // unit price - required
+    '<%= money_no_sign(@order.amount_in_cents.to_f) %>',          // unit price - required
     '1'               // quantity - required
   ]);
   _gaq.push(['_trackTrans']); //submits transaction to the Analytics servers
@@ -62,6 +62,26 @@ fb_param.currency = 'USD';
   })();
 
 </script>
+
+<!-- Google Code for Boxfire CC Checkout Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 949248060;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "UwLyCIy0mwcQvMDRxAM";
+var google_conversion_value = <%= money_no_sign(@order.amount_in_cents.to_f) %>;
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/949248060/?value=0&amp;label=UwLyCIy0mwcQvMDRxAM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
 
 </div>
 </div>
