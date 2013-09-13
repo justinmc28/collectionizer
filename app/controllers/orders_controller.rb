@@ -22,6 +22,7 @@ class OrdersController < ApplicationController
     @order.card = params[:stripeToken]
     @order.amount_in_cents = @order.amount * 100
       if @order.save_with_payment
+        session[:order_time] = Time.now;
         redirect_to @order
       else
         render action: "new", error: "There was a problem. Please try again."
