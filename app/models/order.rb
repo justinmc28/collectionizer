@@ -1,6 +1,6 @@
 class Order < ActiveRecord::Base
   
-  validates :amount, numericality: {greater_than_or_equal_to: 10}
+  validates :amount, numericality: {greater_than_or_equal_to: 5}
   validates :email, presence: true
   validates :email, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create }
   validates :f_name, presence: true
